@@ -524,6 +524,7 @@ section {
     .about-nav-link a {
         padding: 10px 10px;
         text-align: center;
+        font-size: 0.9rem;
     }
     .menu{
         flex-direction: column;
@@ -551,9 +552,7 @@ section {
         right: 0;
     }
 }
-@media only screen and (max-width: 1200px) {
 
-}
 
 /* @media only screen and (max-width: 600px) {
     .container {
