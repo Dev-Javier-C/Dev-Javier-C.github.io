@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Get all navbar links and content sections
+          const navLinks = document.querySelectorAll(".about-nav-link a");
+          const contentSections = document.querySelectorAll(".about-content");
+          const firstContentSection = contentSections[0];
+          firstContentSection.style.display = "block";
+          // Add click event listeners to the navbar links
+          navLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+              event.preventDefault();
+      
+              // Get the target content section based on the data-content attribute
+              const targetContentId = link.getAttribute("data-content");
+              const targetContent = document.getElementById(targetContentId);
+      
+              // Hide all content sections
+              contentSections.forEach((section) => {
+                section.style.display = "none";
+              });
+      
+              // Show the target content section
+              targetContent.style.display = "block";
+            });
+          });
+        });
+    </script>
+      
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="main-nav">
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li class="nav-link"><a href="#home">Main Page</a></li>
+                    <li class="nav-link"><a href="#about">About</a></li>
+                    <li class="nav-link"><a href="#projects">Projects</a></li>
+                    <li class="nav-link"><a href="#contact">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fa fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fa fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">          
+            <div class="content" id="home">
+                <section class="home" >
+                    <p>Designer / Front End Dev</p>
+                    <p>Hi, I'm <span class="animate-charcter">Javier Castaneda</span> <br>From Belize</p>
+                    <!-- Remember to put a backgoud image that help with the name -->
+                </section>   
+            </div>
+            <div class="content">
+                
+                <section class="about" id="about">
+                    <!-- <h2>My Journey</h2> -->
+                    <h1>Get to know me</h2>
+                    <div class="about-container">
+                        
+                        <img src="img/about-img.png" alt="BZE-IMG">
+                        <div class="about-edit">
+                            <p>I am an aspiring front-end developer with a Bachelor's Degree in Computer Science <br>and experience in web development. I am passionate about designing and <br>coding web pages, and I am always up for a challenge.</p>
+                            <div class="about-nav">
+                                <ul>
+                                    <li class="about-nav-link"><a href="#" data-content="about-main">About</a></li>
+                                    <li class="about-nav-link"><a href="#" data-content="about-edu">Education</a></li>
+                                    <li class="about-nav-link"><a href="#" data-content="about-cert">Certifications</a></li>
+                                </ul>
+                            </div>
+                            <div class="about-content" id="about-main">
+                                <h3>It started in high school.</h3>
+                                <ul>
+                                    <li>Took my first programming class in C++.</li>
+                                    <li>Created my first elaborate C++ program.</li>
+                                    <li>Disassembled and rebuilt my first PC.</li>
+                                    <li>Made my first webpage.</li>
+                                </ul><br>
+                                <h3>Continued in Junior college.</h3>
+                                <ul>
+                                    <li>Went deeper into C++.</li>
+                                    <li>Started learning Python.</li>
+                                    <li>Played around with networking.</li>
+                                    <li>Mentored high school students in STEM.</li>
+                                </ul><br>
+                                <h3>4 Years of College Later</h3>
+                                <ul>
+                                    <li>Learned more in depth web development.</li>
+                                    <li>Learned about backend development.</li>
+                                    <li>Made my first iOS app.</li>
+                                    <li>Made web crawler apps with Python.</li>
+                                    <li>Was introduced to game development, from 2D to VR.</li>
+                                    <li>Made a 3D model of the school's dormitory building.</li>
+                                </ul>
+                            </div>
+                            <div class="about-content" id="about-edu">
+                                <h3>National Dong Hwa University, Hualien, Taiwan</h3>
+                                <p class="date">September 2018 - June 2022</p>
+                                <p>B.S in Computer Science and Information Engineering</p>
+                                <p>Undergraduate Coursework: Virtual Reality, App Development, <br>
+                                    Operating Systems; Databases; Algorithms; Programming Languages; <br>
+                                     Comp. Architecture; Calculus II.</p><br>
+                                <h3>Corozal Junior College, Corozal, Belize</h3>
+                                <p class="date">August 2016 - June 2018</p>
+                                <p>Associates in Computer Science</p>
+                                <p>Associate Course Work: Introduction to Programing, <br>
+                                     Intro to Algorithms, Basic C++, Network Management, Calculus, Algebra  </p>
+                            </div>
+                            <div class="about-content" id="about-cert">
+                                <h3>FreeCodeCamp</h3><br>
+                                <p>Responsive Web Design</p>
+                                <a href="https://www.freecodecamp.org/certification/Shadow0Night0/responsive-web-design" class="cert-link" target="_blank">Certification Link</a>
+                                <p>JavaScript Algorithms and Data Structures</p>
+                                <a href="#" class="cert-link">Work in Progress</a>
+                            </div>
+                        </div>                         
+                    </div>
+                </section>
+            </div>
+            <section class="projects" id="projects">
+                <h2>My Projects</h2>
+                <div class="projects-container">
+                    <div class="sub-project">
+                        <div class="card">
+                            <img src="img/login-sinup.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">Login/Signup Page</h1>
+                                <p class="card-sub-title">HTML/CSS</p>
+                                <p class="card-info">My first ever login and signup page, design was inspired by another site I had seen before.</p>
+                                <a href="https://github.com/Dev-Javier-C/College-Projects/tree/main/Signup-Login/Database" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div> 
+                        <div class="card">
+                            <img src="img/rust-img.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">RustStore</h1>
+                                <p class="card-sub-title">HTML/CSS</p>
+                                <p class="card-info">A store page for a game server called rust. It was only the front end nothing on the backend.</p>
+                                <a href="https://github.com/Dev-Javier-C/College-Projects/tree/main/Rust-Server_website" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div> 
+                        <div class="card">
+                            <img src="img/ndhu-img.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">NDHU-Page</h1>
+                                <p class="card-sub-title">HTML/CSS</p>
+                                <p class="card-info">A course project to create a webpage for school that would display multiple departments.</p>
+                                <a href="https://github.com/Dev-Javier-C/College-Projects/tree/main/RandomHtmlProject" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/statscheck-img.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">StatsCheck</h1>
+                                <p class="card-sub-title">Python</p>
+                                <p class="card-info">A course project that uses pythons webcrawler to allow the user to search up their stats on specific games</p>
+                                <a href="https://github.com/Dev-Javier-C/College-Projects/tree/main/StatsCheck" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div>   
+                        <div class="card">
+                            <img src="img/unity3D-img.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">Scale NDHU Model</h1>
+                                <p class="card-sub-title">Unity</p>
+                                <p class="card-info">My 3rd year school project. Project objective was to create a scale model of our campus and be able to explore it in a videogame like fashion</p>
+                                <a href="https://drive.google.com/file/d/1dii4LoMikRQfJmGy0_HyiVRZgg10cWjb/view?usp=sharing" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div>    
+                        <!-- <div class="card">
+                            <img src="img/paddle-img.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">Project1</h1>
+                                <p class="card-sub-title">Python</p>
+                                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum non laboriosam tenetur! Molestiae sapiente ut enim quibusdam asperiores nihil itaque, ex harum soluta, reiciendis illum?</p>
+                                <a href="" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div> 
+                        <div class="card">
+                            <img src="img/baseball-img.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">Project1</h1>
+                                <p class="card-sub-title">Python</p>
+                                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum non laboriosam tenetur! Molestiae sapiente ut enim quibusdam asperiores nihil itaque, ex harum soluta, reiciendis illum?</p>
+                                <a href="" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div>  -->
+                        <div class="card">
+                            <img src="img/NDHU-dorm-img.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">NDHU-Dorms Model</h1>
+                                <p class="card-sub-title">Unity</p>
+                                <p class="card-info">Virtual Reality course project to design any building of choice. I went with one of the dorm buildings.</p>
+                                <a href="https://drive.google.com/file/d/1YW9amQZh8CuOqlUQB2snZaPCzgsDRbZW/view?usp=sharing" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div>    
+                        <div class="card">
+                            <img src="img/temp4.jpg" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title">FreeCodeCamp Projects</h1>
+                                <p class="card-sub-title">HTML/CSS</p>
+                                <p class="card-info">Main projects ive created in order to get the certifications from FreeCodeCamp</p>
+                                <a href="#" class="card-link" target="_blank">Source Code</a>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+                <!-- divide them into section -->
+                <!-- main(html/css) -->
+                <!-- python -->
+                <!-- other -->
+            </section>
+            <div class="content">
+                <section class="contact" id="contact">
+                    <h2>Find Me Here</h2>
+                    <div class="icon-container">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/javier-castaneda-1b0335240/" target="_blank">
+                                <i class="fa fa-linkedin" tabindex="0"></i>
+                              </a></li>
+                            <li><a href="https://github.com/Dev-Javier-C" target="_blank">
+                                <i class="fa fa-github" tabindex="0"></i>
+                              </a></li>
+                            <li><a href="mailto:javcas0210@gmail.com" target="_blank">
+                                <i class="fa fa-envelope" tabindex="0"></i>
+                              </a></li>
+                            <li><a href="https://www.freecodecamp.org/Shadow0Night0" target="_blank">
+                                <i class="fa fa-free-code-camp" tabindex="0"></i>
+                              </a></li>
+                          </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
