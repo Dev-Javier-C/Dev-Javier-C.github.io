@@ -1,0 +1,27 @@
+@media screen and (min-width : 800px) {
+    .container{
+        max-width: 50% !important;
+    }
+    
+}
+@media screen and (min-width : 1200px) {
+    .container{
+        max-width: 40% !important;
+    }
+    
+}
+
+.parent{
+    display: grid;
+    grid-template-columns: 1fr;    
+}
+.child{
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.hide{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
